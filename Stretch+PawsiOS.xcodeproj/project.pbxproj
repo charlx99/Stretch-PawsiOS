@@ -13,6 +13,7 @@
 		ED094F8927A6ABE0001D4CE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED094F8827A6ABE0001D4CE2 /* Preview Assets.xcassets */; };
 		ED094F9227A6C1EF001D4CE2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED094F9127A6C1EF001D4CE2 /* DetailView.swift */; };
 		ED094F9427A6C21D001D4CE2 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED094F9327A6C21D001D4CE2 /* Pose.swift */; };
+		ED8671A827A7ED0200313E37 /* Yoga Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8671A727A7ED0200313E37 /* Yoga Timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		ED094F8827A6ABE0001D4CE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED094F9127A6C1EF001D4CE2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		ED094F9327A6C21D001D4CE2 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
+		ED8671A727A7ED0200313E37 /* Yoga Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yoga Timer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				ED094F8327A6ABD6001D4CE2 /* ContentView.swift */,
 				ED094F9127A6C1EF001D4CE2 /* DetailView.swift */,
 				ED094F9327A6C21D001D4CE2 /* Pose.swift */,
+				ED8671A727A7ED0200313E37 /* Yoga Timer.swift */,
 				ED094F8527A6ABE0001D4CE2 /* Assets.xcassets */,
 				ED094F8727A6ABE0001D4CE2 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8671A827A7ED0200313E37 /* Yoga Timer.swift in Sources */,
 				ED094F9427A6C21D001D4CE2 /* Pose.swift in Sources */,
 				ED094F8427A6ABD6001D4CE2 /* ContentView.swift in Sources */,
 				ED094F9227A6C1EF001D4CE2 /* DetailView.swift in Sources */,

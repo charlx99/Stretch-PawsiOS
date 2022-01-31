@@ -24,7 +24,7 @@ struct DetailView: View {
                         .foregroundColor(Color("Highlight"))
                         .multilineTextAlignment(.center)
                     Text(pose.asana)
-                        .font(.system(size: 22))
+                        .font(.system(size: 24))
                         .italic()
                         .fontWeight(.medium)
                     VStack(alignment: .leading, spacing: 20) {
@@ -75,7 +75,7 @@ struct TimerPanelView: View {
                 timerOpen ? AnyView(TimerOpenView()) :  AnyView(TimerClosedView())
             }
             .foregroundColor(Color("Secondary"))
-            .frame(maxWidth: .infinity, maxHeight: timerOpen ? 200 : 80)
+            .frame(maxWidth: .infinity, maxHeight: timerOpen ? 400 : 80)
             .background(Color("Highlight"))
             .cornerRadius(24)
         }
@@ -88,12 +88,41 @@ struct TimerPanelView: View {
 
 struct TimerOpenView: View {
     var body: some View {
-        Text("Hold that pose")
+        
+        VStack {
+            Text("Hold The Pose")
+                .fontWeight(.bold)
+                .font(.system(size:18))
+
+            Spacer()
+            Text("Try staying in this pose for 30 seconds, if you need to come out sooner, that’s ok.")
+                .multilineTextAlignment(.center)
+                .font(.system(size:18))
+            Spacer()
+            Text("00:30")
+                .font(.system(size:96))
+            Spacer()
+            Button {
+                //do something
+            } label: {
+                Text("START THE TIMER")
+                    .fontWeight(.bold)
+                    .font(.system(size:18))
+            }
+            .frame(width: 320, height: 54)
+            .background(Color("Secondary"))
+            .foregroundColor(Color("Primary"))
+            .cornerRadius(32)
+        }.padding(24)
     }
 }
 
 struct TimerClosedView: View {
     var body: some View {
-        Text("Try it Out")
+        Text("TRY IT OUT")
+            .fontWeight(.bold)
+            .font(.system(size:18))
+            .padding(24)
+        Spacer()
     }
 }

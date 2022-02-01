@@ -64,6 +64,8 @@ struct DetailView_Previews: PreviewProvider {
 }
 
 struct TimerPanelView: View {
+    
+    @StateObject var yogaTimer = YogaTimer()
     @Binding var timerOpen: Bool
     var body: some View {
         // If the timer panel is closed, show the timer closed view.
@@ -72,7 +74,7 @@ struct TimerPanelView: View {
         VStack {
             Spacer()
             VStack {
-                timerOpen ? AnyView(TimerOpenView()) :  AnyView(TimerClosedView())
+                timerOpen ? AnyView(TimerOpenView(yogaTimer: yogaTimer)) :  AnyView(TimerClosedView())
             }
             .foregroundColor(Color("Secondary"))
             .frame(maxWidth: .infinity, maxHeight: timerOpen ? 400 : 80)
@@ -87,6 +89,9 @@ struct TimerPanelView: View {
 }
 
 struct TimerOpenView: View {
+    
+    @ObservedObject var yogaTimer: YogaTimer
+    
     var body: some View {
         
         VStack {
@@ -99,11 +104,12 @@ struct TimerOpenView: View {
                 .multilineTextAlignment(.center)
                 .font(.system(size:18))
             Spacer()
-            Text("00:30")
+            Text(yogaTimer.timerDuration < 10 ? "00:0\(yogaTimer.timerDuration)" :
+                "00:\(yogaTimer.timerDuration)")
                 .font(.system(size:96))
             Spacer()
             Button {
-                //do something
+                yogaTimer.startTimer()
             } label: {
                 Text("START THE TIMER")
                     .fontWeight(.bold)

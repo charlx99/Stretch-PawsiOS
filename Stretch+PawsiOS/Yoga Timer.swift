@@ -11,13 +11,13 @@ import Foundation
 // A class(reference type -> an object somewhere) or struct(value types -> can be copied and shared)?
 // Where does the timer need to be shared?
 
-class YogaTimer {
+class YogaTimer: ObservableObject {
     
     // Timer states
-    var timerActive = false
-    var timerPaused = false
-    var timerEnded = false
-    var timerDuration = 30
+    @Published var timerActive = false
+    @Published var timerPaused = false
+    @Published var timerEnded = false
+    @Published var timerDuration = 30
     var yogaTimer = Timer()
     
     // Timer functionality

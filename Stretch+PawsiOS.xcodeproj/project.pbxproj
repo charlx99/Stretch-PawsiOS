@@ -13,6 +13,7 @@
 		ED094F8927A6ABE0001D4CE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED094F8827A6ABE0001D4CE2 /* Preview Assets.xcassets */; };
 		ED094F9227A6C1EF001D4CE2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED094F9127A6C1EF001D4CE2 /* DetailView.swift */; };
 		ED094F9427A6C21D001D4CE2 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED094F9327A6C21D001D4CE2 /* Pose.swift */; };
+		ED79465627A8E9EE00A7D151 /* chime.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED79465527A8E9ED00A7D151 /* chime.wav */; };
 		ED8671A827A7ED0200313E37 /* Yoga Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8671A727A7ED0200313E37 /* Yoga Timer.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		ED094F8827A6ABE0001D4CE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED094F9127A6C1EF001D4CE2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		ED094F9327A6C21D001D4CE2 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
+		ED79465527A8E9ED00A7D151 /* chime.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chime.wav; sourceTree = "<group>"; };
 		ED8671A727A7ED0200313E37 /* Yoga Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yoga Timer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				ED094F9327A6C21D001D4CE2 /* Pose.swift */,
 				ED8671A727A7ED0200313E37 /* Yoga Timer.swift */,
 				ED094F8527A6ABE0001D4CE2 /* Assets.xcassets */,
+				ED79465527A8E9ED00A7D151 /* chime.wav */,
 				ED094F8727A6ABE0001D4CE2 /* Preview Content */,
 			);
 			path = "Stretch+PawsiOS";
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED79465627A8E9EE00A7D151 /* chime.wav in Resources */,
 				ED094F8927A6ABE0001D4CE2 /* Preview Assets.xcassets in Resources */,
 				ED094F8627A6ABE0001D4CE2 /* Assets.xcassets in Resources */,
 			);

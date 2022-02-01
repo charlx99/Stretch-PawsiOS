@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 // What kind of data type should this be?
 // A class(reference type -> an object somewhere) or struct(value types -> can be copied and shared)?
@@ -19,6 +20,8 @@ class YogaTimer: ObservableObject {
     @Published var timerEnded = false
     @Published var timerDuration = 30
     var yogaTimer = Timer()
+    var audioPlayer: AVAudioPlayer?
+
     
     // Timer functionality
     
@@ -58,6 +61,7 @@ class YogaTimer: ObservableObject {
         // Timer stops running
         // Timer duration resets ready for the next time we run it
         
+        playSound(sound: "chime", type: "wav")
         timerEnded = true
         timerActive = false
         yogaTimer.invalidate()
@@ -65,8 +69,15 @@ class YogaTimer: ObservableObject {
     }
     
     // Play a sound
-    func playSound() {
-        // Play audio file
+    func playSound(sound: String, type: String) {
+        if let path = Bundle.main.path(forResource: sound, ofType: type) {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                audioPlayer?.play()
+            } catch {
+                print("ERROR")
+            }
+        }
     }
     
     //Timer Styles
